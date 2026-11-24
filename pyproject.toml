@@ -5,6 +5,7 @@ description = "Excel Desktop Editor"
 requires-python = ">=3.9"
 dependencies = [
     "flet",
+    "flet-webview",
 ]
 
 [tool.flet]

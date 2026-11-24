@@ -144,4 +144,4 @@ def main(page: ft.Page):
     wv = ft.WebView(url=f"data:text/html;base64,{b64_html}", expand=True)
     page.add(wv)
 
-ft.app(target=main)
+ft.run(main)
