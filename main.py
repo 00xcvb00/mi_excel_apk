@@ -141,8 +141,11 @@ def main(page: ft.Page):
     page.title = "Excel Desktop Editor"
     page.padding = 0
     page.spacing = 0
-    b64_html = base64.b64encode(HTML_APP.encode("utf-8")).decode("utf-8")
-    wv = fwv.WebView(url=f"data:text/html;base64,{b64_html}", expand=True)
+    wv = fwv.WebView(
+        url="/index.html",
+        expand=True,
+        enable_javascript=True,
+    )
     page.add(wv)
 
 ft.run(main)
