@@ -8,3 +8,7 @@ jobs:
       - uses: flet-dev/flet-build-action@v1
         with:
           target: apk
+      - uses: actions/upload-artifact@v4
+        with:
+          name: mi-excel-apk
+          path: build/apk/*.apk
