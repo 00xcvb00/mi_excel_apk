@@ -1,3 +1,4 @@
+import flet_webview as fwv
 import flet as ft
 import base64
 import json
@@ -141,7 +142,7 @@ def main(page: ft.Page):
     page.padding = 0
     page.spacing = 0
     b64_html = base64.b64encode(HTML_APP.encode("utf-8")).decode("utf-8")
-    wv = ft.WebView(url=f"data:text/html;base64,{b64_html}", expand=True)
+    wv = fwv.WebView(url=f"data:text/html;base64,{b64_html}", expand=True)
     page.add(wv)
 
 ft.run(main)
